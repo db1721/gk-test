@@ -1,0 +1,191 @@
+/* Add your CSS here */
+span.validation-field-error {
+	color: red;
+}
+
+/* Logo Height on Scroll */
+.header.headhesive.headhesive--stick .logo img {
+	/*height: 28px;*/
+}
+
+/*  FORUM MOBILE CORRECTION */
+@media only screen and (max-width: 768px) {
+	div.row {
+		margin-left: 17px;
+		margin-right: 17px;
+	}
+
+	.reset-box {
+		width: 90%;
+	}
+
+	.bbp-single-user-details .bbp-user-avatar, .bbp-single-user-details .bbp-user-navigation {
+		width: 100%;
+		margin: 17px;
+		text-align: center;
+	}
+
+	.bbp-forums .bbp-header .bbp-forum-topic-submitted,
+	.bbp-forums .bbp-header .bbp-forum-reply-count, 
+	.bbp-forums .bbp-header .bbp-forum-view-count {
+		width: 20% !important;
+		float: left;
+	}
+
+	.bbp-forums .bbp-header .bbp-forum-topic,
+	.bbp-body .forum .bbp-forum-topic {
+		float: left;
+		width: 30% !important;
+	}
+	
+	.bbp-body .forum .bbp-forum-topic-submitted,
+	.bbp-body .forum .bbp-forum-reply-count,
+	.bbp-body .forum .bbp-forum-view-count {
+		float: left;
+		width: 20% !important;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+    .bbp-forums .bbp-body .bbp-forum-freshness {
+        overflow-wrap: break-word;
+        width: 20% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bbp-body .forum .bbp-forum-topic, .bbp-forums .bbp-header .bbp-forum-topic {
+        width: 35%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .bbp-forums .bbp-header .bbp-forum-topic-submitted {
+        width: auto;
+        margin-left: 17px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .bbp-body .forum .bbp-forum-last-post, .bbp-forums .bbp-header .bbp-forum-last-post {
+        width: 15%;
+        float: right;
+    }
+}
+
+.bbp-single-user-details .bbp-user-avatar {
+	width: 250px;
+	margin-right: 27px;
+}
+
+.single-topic-title, .single-topic-author {
+	text-transform: none;
+	font-size: 21px;
+	margin: 0 0 7px 0;
+}
+
+.keyword-result {
+	font-weight: 700;
+	font-size: 17px;
+}
+
+.keyword-result {
+	font-weight: 700;
+	font-size: 17px;
+}
+
+.bbp-forums .bbp-header .bbp-forum-topic,
+.bbp-body .forum .bbp-forum-topic {
+	width:45%;
+	float: left;
+}
+
+.bbp-forums .bbp-header .bbp-forum-topic-submitted,
+.bbp-forums .bbp-header .bbp-forum-reply-count, 
+.bbp-forums .bbp-header .bbp-forum-view-count {
+	width: 10%;
+	float: left;
+}
+
+.bbp-body .forum .bbp-forum-topic-submitted,
+.bbp-body .forum .bbp-forum-reply-count,
+.bbp-body .forum .bbp-forum-view-count {
+	float: left;
+	width: 10%;
+}
+
+.bbp-forums .bbp-header .bbp-forum-last-post,
+.bbp-body .forum .bbp-forum-last-post {
+	width: 20%;
+	float: left;
+}
+.bbp-forums .bbp-body .forum .bbp-forum-last-post {
+	font-size: 12px;
+}
+
+.bbp-forums .bbp-body .forum .bbp-forum-last-post a {
+	color: #66782e;
+}
+
+.bbp-forum-last-post a {
+	font-weight: 600;
+}
+
+.bbp-forum-last-post a:hover {
+	color: #9c8d56 !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .bbp-body .forum .bbp-forum-topic, .bbp-forums .bbp-header .bbp-forum-topic, .bbp-forum-title {
+        width: 35%;
+	}
+}
+@media only screen and (max-width:768px) {
+    .bbp-forums .bbp-header .bbp-forum-topic-submitted {
+        width: 15% !important;
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .bbp-body .forum .bbp-forum-last-post, .bbp-forums .bbp-header .bbp-forum-last-post {
+        width: 15%;
+        float: right;
+    }
+}
+.bbp-forums .bbp-header {
+	padding: 7px 0 7px 10px;
+}
+
+@media only screen and (max-width:768px) {
+	.mobile-forum p {
+		margin:0
+	}
+	.mobile-forum .bbp-header {
+		font-size:12px;
+		font-family: Oswald;
+		color:#2f2f2f;
+	}
+	.mobile-forum .bbp-forum-title {
+		color: #66782e;
+	}
+	.mobile-forum .bbp-author-name::before {
+		content: " by: ";
+		color: #2f2f2f;
+		font-size: 12px;
+		font-family: Oswald;
+		font-weight: 500;
+	}
+	.mobile-forum .bbp-author-name {
+		font-weight:600;
+	}
+	.mobile-forum .bbp-forum-topic-submitted {
+		font-weight: 600;
+	}
+
+	.desktop-forum {
+		display:none;
+	}
+}
+@media only screen and (min-width:768px) {
+	.mobile-forum {
+		display: none;
+	}
+}

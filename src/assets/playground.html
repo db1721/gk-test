@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        input {
+            width: 27.4em;
+            height: 3.625em;
+            border: 1px solid #252728;
+            border-radius: 5px;
+        }
+        input + .icon {
+            width: 1.5em;
+            height: 1.5em;
+            
+            
+
+            &.eye {
+                align-self: center;
+                margin-left: -3.5em;
+            }
+            &::after{
+                content: url('./images/EyeSlash.png');
+                
+                
+            }
+            
+        }
+        input + i {
+            padding: .625em;
+        }
+
+        .wrapper {
+           display: flex;
+           flex-direction: row;
+        }
+    </style>
+    <div class="wrapper">
+        <input type="password" />
+        <i class="icon eye"></i>
+    </div>
+    
+    
+</body>
+</html>

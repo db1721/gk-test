@@ -1,0 +1,80 @@
+<template>
+    <div class="row">
+        <search-component />
+
+        <div class="bbp-pagination">
+            <div class="bbp-pagination-count">
+                Viewing {{ forums_by_category.length }} posts - 1 through 5 (of {{ forums_by_category.length }} total)
+            </div>
+        </div>
+
+        <ul class="forums bbp-replies">
+            <li class="bbp-body">
+                <div class="topic" v-for="forum in forums_by_category" :key="forum.id">
+                    <div class="bbp-reply-author">
+                        <user-profile-image :user="forum.user" />
+                    </div>
+                    <div class="bbp-reply-content">
+                        <div class="bbp-reply-header clearfix">
+                            <div class="bbp-meta">
+                                <div class="bbp-reply-post-date">{{ forum.createdAt }}</div>
+                                <a href="javascript:void(0)" class="bbp-reply-permalink">#{{ forum.id }}</a>
+                            </div>
+                        </div>
+                        <div class="bbp-reply-title">
+                            <h3>
+                                <router-link :to="{ name: 'forum-view', params: { forum_system_name: forum.system_name } }">{{ forum.title }}</router-link>
+                            </h3> 
+                        </div>
+                        <div class="bbp-reply-entry">
+                            {{ forum.content }}
+                        </div>
+                        <div class="bbp-arrow"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="bbp-pagination">
+            <div class="bbp-pagination-count">
+                Viewing {{ forums_by_category.length }} posts - 1 through 5 (of {{ forums_by_category.length }} total)
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import { mapGetters, mapActions } from 'vuex'
+import UserProfileImage from './partials/UserProfileImage.vue'
+import SearchComponent from './partials/Search.vue'
+
+export default {
+    components: {
+        UserProfileImage,
+        SearchComponent
+    },
+
+    created () {
+        const route_category_system_name = this.$route.params.forum_category_system_name
+
+        if (! this.current_category || this.current_category.system_name != route_category_system_name) {
+            this.getForumsByCategorySystemNameFromAPI(route_category_system_name)
+        }
+    },
+
+    computed: {
+        ...mapGetters('forumStore', {
+            forums_by_category: 'forums_by_category'
+        }),
+
+        ...mapGetters('forumCategoryStore', {
+            current_category: 'current_category'
+        })
+    },
+
+    methods: {
+        ...mapActions('forumCategoryStore', ['getForumCategoryBySystemName']),
+        ...mapActions('forumStore', ['getForumsByCategorySystemNameFromAPI'])
+    }
+}
+</script>

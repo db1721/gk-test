@@ -1,0 +1,38 @@
+//Typography
+$base-size: 1.125rem;
+$marquee-size: $base-size * 3.333;
+$h1-size: $base-size * 1.778;
+$h2-size: $base-size * 1.611;
+$h3-size: $base-size * 1.444;
+$sub-heading-size: $base-size * 1.333;
+$sub-heading2-size: $base-size * 1.111;
+$button-text-size: $base-size * 0.889;
+$menu-text-size: $base-size * 0.778;
+
+$font-stack: Roboto, "Franklin Gothic Regular", Tahoma, sans-serif;
+$font-stack-bold: Roboto-Bold, "Franklin Gothic Bold", Tahoma, sans-serif;
+
+//Color
+$primary-orange: #FF6B00;
+$army-green: #505040;
+$brand-black: #252728;
+$neutral-grey: #A1A1A1;
+$neutral-grey-09: #DEDEDE;
+$brand-blue: #2683D8;
+$secondary-orange: #F1A448;
+$brand-red: #D60000;
+$brand-red-07: #FF5C5C;
+$brand-white: #FFFFFD;
+$black-text:#3B3D3F;
+
+//Spacings
+$space-8: 0.5rem; // 8px
+$space-16: 1rem; // 16px
+$space-24: 1.5rem;
+$space-32: 2rem;
+$space-40: 2.5rem;
+$space-48: 3rem;
+$space-60: 3.75rem;
+$space-90: 5.625rem;
+$space-120: 7.5rem;
+$space-140: 8.75rem;
